@@ -12,7 +12,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Vote: {{ $movie->vote }}</h5>
                             <p class="card-text">Published: {{ date('d M Y', strtotime($movie->date)) }}</p>
-                            <a href="#" class="card-link">See More</a>
+                            <a href="{{ route('movies.show', ['id' => $movie->id]) }}" class="card-link">See More</a>
                         </div>
                     </div>
                 </div>

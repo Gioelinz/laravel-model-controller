@@ -9,8 +9,9 @@
                 <p class="card-text">Date of publish: <span
                         class="text-decoration-underline">{{ date('d M Y', strtotime($movie->date)) }}</span></p>
                 <h6 class="card-title">Vote: {{ $movie->vote }}</h6>
-
             </div>
         </div>
+        <a href="{{ route('movies.index') }}" class="btn btn-danger">
+            &#128281; Back to all Movies</a>
     </div>
 @endsection
