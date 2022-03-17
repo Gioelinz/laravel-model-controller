@@ -10,7 +10,11 @@
                     <div class="card border-info my-3">
                         <div class="card-header fs-5">{{ $movie->title }}</div>
                         <div class="card-body">
-                            <h5 class="card-title">Vote: {{ $movie->vote }}</h5>
+                            <h5 class="card-title">Vote:
+                                @for ($i = 0; $i < 5; $i++)
+                                    <i class="fa-star {{ floor($movie->vote / 2) > $i ? 'fa-solid' : 'fa-regular' }}"></i>
+                                @endfor
+                            </h5>
                             <p class="card-text">Published: {{ date('d M Y', strtotime($movie->date)) }}</p>
                             <a href="{{ route('movies.show', ['id' => $movie->id]) }}" class="card-link">See More</a>
                         </div>
