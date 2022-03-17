@@ -12,6 +12,6 @@
             </div>
         </div>
         <a href="{{ route('movies.index') }}" class="btn btn-danger">
-            &#128281; Back to all Movies</a>
+            &#11148; Back to all Movies</a>
     </div>
 @endsection
