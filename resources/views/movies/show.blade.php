@@ -9,9 +9,12 @@
                 <p class="card-text">Date of publish: <span
                         class="text-decoration-underline">{{ date('d M Y', strtotime($movie->date)) }}</span></p>
                 <h6 class="card-title">Vote:
-                    @for ($i = 0; $i < 5; $i++)
+
+                    @include('includes.stars_logic')
+
+                    {{-- @for ($i = 0; $i < 5; $i++)
                         <i class="fa-star {{ floor($movie->vote / 2) > $i ? 'fa-solid' : 'fa-regular' }}"></i>
-                    @endfor
+                    @endfor --}}
                 </h6>
             </div>
         </div>
